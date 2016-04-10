@@ -222,7 +222,7 @@
               <object class="GtkScrolledWindow" id="scrolledwindow1">
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
-                <property name="vscrollbar_policy">never</property>
+                <property name="hscrollbar_policy">never</property>
                 <child>
                   <object class="GtkViewport" id="viewport1">
                     <property name="visible">True</property>
@@ -303,23 +303,51 @@
                         <property name="orientation">vertical</property>
                         <property name="baseline_position">bottom</property>
                         <child>
-                          <object class="GtkAspectFrame" id="album_art_frame">
+                          <object class="GtkBox" id="visbox">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
-                            <property name="margin_top">12</property>
-                            <property name="margin_bottom">12</property>
-                            <property name="label_xalign">0</property>
                             <child>
-                              <object class="GtkImage" id="album_art_image">
+                              <object class="GtkDrawingArea" id="drawing_area">
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
-                                <property name="halign">center</property>
-                                <property name="valign">center</property>
+                                <property name="margin_left">12</property>
+                                <property name="margin_right">12</property>
+                                <property name="margin_top">12</property>
+                                <property name="margin_bottom">12</property>
                                 <property name="hexpand">True</property>
                                 <property name="vexpand">True</property>
-                                <property name="xpad">12</property>
-                                <property name="ypad">12</property>
                               </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="position">0</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkAspectFrame" id="album_art_frame">
+                                <property name="visible">True</property>
+                                <property name="can_focus">False</property>
+                                <property name="margin_top">12</property>
+                                <property name="margin_bottom">12</property>
+                                <property name="label_xalign">0</property>
+                                <child>
+                                  <object class="GtkImage" id="album_art_image">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">False</property>
+                                    <property name="halign">center</property>
+                                    <property name="valign">center</property>
+                                    <property name="hexpand">True</property>
+                                    <property name="vexpand">True</property>
+                                    <property name="xpad">12</property>
+                                    <property name="ypad">12</property>
+                                  </object>
+                                </child>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="position">1</property>
+                              </packing>
                             </child>
                           </object>
                           <packing>
